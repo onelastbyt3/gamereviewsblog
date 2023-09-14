@@ -4,7 +4,7 @@
 
 
 ## Overview
-This is a Django web app where users can write a video game review and be able to discuss them with others via comments. Users can also submit requests for other reviewers to write a review, and can view every review associated with a specific reviewer. It uses simple HTML templates to render the frontend, with Django on the backend. 
+This is a Django web app where users can write a video game review and be able to discuss them with others via comments. Users can also submit requests for other reviewers to write a review, and can view every post associated with a specific reviewer. It uses simple HTML templates to render the frontend, with Django on the backend. 
 
 ## Screenshots
 
@@ -49,6 +49,8 @@ py manage.py migrate
 ```
 py manage.py runserver
 ```
+## Development Notes
+
 
 
 ## Contributions
