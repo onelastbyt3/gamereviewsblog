@@ -1,0 +1,17 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Review List</h1>
+  {% if review_list %}
+    <ul>
+      {% for review in review_list %}
+      <li>
+        <a href="{{ review.get_absolute_url }}">{{ review.title }}</a>
+        (<a href="{% url 'reviewer-detail' review.reviewer.id %}"><i>{{ review.reviewer }}</i></a>)
+      </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>There are no reviews.</p>
+  {% endif %}
+{% endblock %}

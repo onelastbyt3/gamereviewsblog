@@ -1,0 +1,18 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>GameReviewBlog</h1>
+  <p>
+    Welcome to GameReviewBlog, a website developed by
+    <em>onelastbyt3!</em>!
+  </p>
+  <p><img src="../static/index.png" width="700" height="450"></p>
+  <p>The blog has the following record counts:</p>
+  <ul>
+    <li><strong>Games:</strong> {{ num_games }}</li>
+    <li><strong>Reviews:</strong> {{ num_reviews }}</li>
+    <li><strong>Reviewers:</strong> {{ num_reviewer }}</li>
+    <li><strong>Visits Today:</strong> {{ num_visits }}</li>
+  </ul>
+
+{% endblock %}

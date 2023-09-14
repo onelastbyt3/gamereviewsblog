@@ -1,0 +1,23 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>{{ game.name }}</h1>
+
+  <p><strong>Genre:</strong>
+    {% for genre in game.genre.all %}
+      {{ genre.type }}
+      {% if not forloop.last %}, {% endif %}
+    {% endfor %}
+  </p>
+
+  <p><strong>About:</strong> {{ game.summary }}</p>
+
+  <h3>Reviews:</h3>
+  <ul>
+    {% for review in reviews %}
+      <li>
+        <a href="{% url 'review-detail' review.id %}">{{ review.title }}</a> by <a href="{% url 'reviewer-detail' review.reviewer.id %}"><i>{{ review.reviewer }}</i></a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

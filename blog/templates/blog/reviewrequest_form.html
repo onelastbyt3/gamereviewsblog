@@ -1,0 +1,13 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Request a Game Review</h1>
+  <form method="post">
+    {% csrf_token %}
+    
+    <label for="{{ form.request_game.id_for_label }}">What game(s) would you like us to review next?:</label>
+    <br>{{ form.request_game }}
+    
+    <br><button type="submit">Submit</button>
+  </form>
+{% endblock %}
