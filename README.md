@@ -58,7 +58,7 @@ To allow users to navigate the application smoothly, I configured URL patterns t
 
 In terms of testing, I developed unit tests for views and models to verify their proper functionality. These tests covered a range of scenarios, including edge cases and input validation. During development, I actively used Django's built-in debugging tools and error messages to identify and address issues promptly.
 
-Overall, this was a very fun project to tackle. I hope this app can bring you some joy in reading about what others think about a particular game, and maybe help you in your purchasing decision. As the app is designed to scale, meaning more functionality such as user interaction, or consuming game information from another API such as HowLongToBeat's, can be implemented to further enhance the user experience some time in the future if I want to develop this further. However, as this was a passion project and a dive into Django development overall, I am content with leaving the project as is for now. 
+Overall, this was a very fun project to tackle. I hope this app can bring you some joy in reading about what others think about a particular game, and maybe help you in your purchasing decision. As the app is designed to scale, meaning more functionality such as user private messaging, or consuming game information from another API such as HowLongToBeat's, can be implemented to further enhance the user experience some time in the future if I want to develop this further. However, as this was a passion project and a dive into Django development overall, I am content with leaving the project as is for now. 
 
 
 ## Contributions
