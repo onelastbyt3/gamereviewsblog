@@ -5,7 +5,7 @@
 
   <p><strong>Genre:</strong>
     {% for genre in game.genre.all %}
-      {{ genre.type }}
+      {{ genre.genre_type }}
       {% if not forloop.last %}, {% endif %}
     {% endfor %}
   </p>
