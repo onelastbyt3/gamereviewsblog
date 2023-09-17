@@ -50,7 +50,7 @@ py manage.py migrate
 py manage.py runserver
 ```
 ## Development Notes
-As a backend dev, my primary focus was to ensure the functionality of backend views/models, and that all data was retrieved and displayed without any issues. To achieve this, I started by creating data models that accurately represented the core elements of the application, including Review, Game, Genre, Reviewer, and ReviewRequest. Using Django's Object-Relational Mapping (ORM), I established relationships between each models and set up the database schema.
+As a backend dev, my primary focus was to ensure the functionality of backend views/models, and that all data was retrieved and displayed without any issues. To achieve this, I started by creating data models that accurately represented the core elements of the application, including Review, Game, Genre, Reviewer, and ReviewRequest. Using Django's Object-Relational Mapping (ORM), I established relationships between each models and set up the database schema. I decided to go with SQLite for storage due to the simplicity and scale of the data required for a small scale project.
 
 For the frontend, I designed and implemented various views and templates. This involved creating both functional and class views for displaying lists of reviews, detailed review views, game details, reviewer profiles, review request forms, and so forth. To enhance user experience and aesthetics, I integrated clean and responsive HTML templates using Django's templating engine. Additionally, static files, including images and a small portion of CSS, were integrated to ensure a polished user interface.
 
@@ -58,8 +58,7 @@ To allow users to navigate the application smoothly, I configured URL patterns t
 
 In terms of testing, I developed unit tests for views and models to verify their proper functionality. These tests covered a range of scenarios, including edge cases and input validation. During development, I actively used Django's built-in debugging tools and error messages to identify and address issues promptly.
 
+Lastly, I deployed this application to AWS via EC2 instance. The backend was functioning smoothly, however I ran into an issue where the static files wouldn't load properly. This was resolved quickly with Whiteboard, as well as some basic NGINX configurations.  
+
 Overall, this was a very fun project to tackle. I hope this app can bring you some joy in reading about what others think about a particular game, and maybe help you in your purchasing decision. As the app is designed to scale, meaning more functionality such as user private messaging, or consuming game information from another API such as HowLongToBeat's, can be implemented to further enhance the user experience some time in the future if I want to develop this further. However, as this was a passion project and a dive into Django development overall, I am content with leaving the project as is for now. 
 
-
-## Contributions
-Contributions to this project are welcome, as this was a simple project with many features/design elements still lacking mainly in CSS styling and overall page aesthetic. Any frontend developers looking to contribute are welcome to submit a pull request for review! 
