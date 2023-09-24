@@ -11,5 +11,6 @@ urlpatterns = [
     path('games/<int:pk>', views.GameDetailView.as_view(), name='game-detail'),
     path('reviewer/<int:pk>', views.ReviewerDetailView.as_view(), name='reviewer-detail'),
     path('requests/', views.ReviewRequestCreate.as_view(), name='review-request'),
-    path('requests/success', views.ReviewRequestSuccess, name='review-request-success')
+    path('requests/success', views.ReviewRequestSuccess, name='review-request-success'),
+    path('search/', views.search_view, name='search'),
 ]

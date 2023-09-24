@@ -95,4 +95,13 @@ class ReviewRequestCreate(LoginRequiredMixin, CreateView):
     model = ReviewRequest
     fields = ['request_game']
     success_url = reverse_lazy('review-request-success')
+
+
+def search_view(request):
+    query = request.GET.get('query')
+    games = []
     
+    if query:
+        games = Game.objects.filter(name__icontains=query)
+    
+    return render(request, 'blog/search_page.html', {'games': games})

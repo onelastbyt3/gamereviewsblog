@@ -1,0 +1,25 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Search For A Game</h1>
+
+  <form method="get" action="{% url 'search' %}">
+    <input type="text" name="query" placeholder="Enter title or keyword">
+    <button type="submit">Search</button>
+  </form>
+
+  <hr>
+
+  {% if games %}
+    <h2>Page Results:</h2>
+    <ul>
+      {% for game in games %}
+        <li><a href="{% url 'game-detail' game.id %}">{{ game.name }}</a></li>
+      {% endfor %}
+    </ul>
+  {% else %}
+  <h2>Page Results:</h2>
+    <p>No games found.</p>
+  {% endif %}
+
+{% endblock %}
